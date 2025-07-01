@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - S.N. Catering</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    .gallery-img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    }
+    @media (max-width: 767px) {
+      .gallery-img { height: 120px !important; }
+      .card-body small { font-size: 0.9rem !important; }
+      .container { padding: 0 5px !important; }
+    }
+    </style>
+</head>
+<body style="background: linear-gradient(135deg, #f8f6f0 0%, #e8e6e1 100%), url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); background-repeat: repeat; min-height: 100vh;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">S.N. Catering</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="services/weddings.html">Weddings</a>
+                            <a class="dropdown-item" href="services/birthdays.html">Birthdays</a>
+                            <a class="dropdown-item" href="services/corporate.html">Corporate</a>
+                            <a class="dropdown-item" href="services/traditional.html">Traditional</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="py-5 mt-5" style="background: linear-gradient(135deg, #e0a362 0%, #fd682d 100%); border-radius: 18px; box-shadow: 0 4px 32px rgba(44,62,80,0.08);">
+        <div class="container">
+            <h1 class="mb-4">Photo Gallery</h1>
+            <p>Check out some of our best moments and delicious dishes from past events!</p>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355683981.jpg" data-caption="Celebration Setup">
+                            <img src="images/gallery/FB_IMG_1751355683981.jpg" class="img-fluid rounded gallery-img" alt="Celebration Setup">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Celebration Setup</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355656313.jpg" data-caption="Buffet Table">
+                            <img src="images/gallery/FB_IMG_1751355656313.jpg" class="img-fluid rounded gallery-img" alt="Buffet Table">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Buffet Table</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355687478.jpg" data-caption="Event Decor">
+                            <img src="images/gallery/FB_IMG_1751355687478.jpg" class="img-fluid rounded gallery-img" alt="Event Decor">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Event Decor</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355660613.jpg" data-caption="Food Display">
+                            <img src="images/gallery/FB_IMG_1751355660613.jpg" class="img-fluid rounded gallery-img" alt="Food Display">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Food Display</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355674035.jpg" data-caption="Serving Area">
+                            <img src="images/gallery/FB_IMG_1751355674035.jpg" class="img-fluid rounded gallery-img" alt="Serving Area">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Serving Area</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355737549.jpg" data-caption="Dessert Table">
+                            <img src="images/gallery/FB_IMG_1751355737549.jpg" class="img-fluid rounded gallery-img" alt="Dessert Table">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Dessert Table</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355690161.jpg" data-caption="Outdoor Event">
+                            <img src="images/gallery/FB_IMG_1751355690161.jpg" class="img-fluid rounded gallery-img" alt="Outdoor Event">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Outdoor Event</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355734906.jpg" data-caption="Table Setting">
+                            <img src="images/gallery/FB_IMG_1751355734906.jpg" class="img-fluid rounded gallery-img" alt="Table Setting">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Table Setting</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355666756.jpg" data-caption="Buffet Spread">
+                            <img src="images/gallery/FB_IMG_1751355666756.jpg" class="img-fluid rounded gallery-img" alt="Buffet Spread">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Buffet Spread</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355678675.jpg" data-caption="Live Counter">
+                            <img src="images/gallery/FB_IMG_1751355678675.jpg" class="img-fluid rounded gallery-img" alt="Live Counter">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Live Counter</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355671798.jpg" data-caption="Banquet Hall">
+                            <img src="images/gallery/FB_IMG_1751355671798.jpg" class="img-fluid rounded gallery-img" alt="Banquet Hall">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Banquet Hall</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355676258.jpg" data-caption="Buffet Service">
+                            <img src="images/gallery/FB_IMG_1751355676258.jpg" class="img-fluid rounded gallery-img" alt="Buffet Service">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Buffet Service</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355680869.jpg" data-caption="Food Platter">
+                            <img src="images/gallery/FB_IMG_1751355680869.jpg" class="img-fluid rounded gallery-img" alt="Food Platter">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Food Platter</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355698965.jpg" data-caption="Event Ambience">
+                            <img src="images/gallery/FB_IMG_1751355698965.jpg" class="img-fluid rounded gallery-img" alt="Event Ambience">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Event Ambience</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355746771.jpg" data-caption="Celebration Moment">
+                            <img src="images/gallery/FB_IMG_1751355746771.jpg" class="img-fluid rounded gallery-img" alt="Celebration Moment">
+                        </a>
+                        <div class="card-body p-2 text-center"><small>Celebration Moment</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content bg-dark">
+          <div class="modal-body p-0">
+            <img id="modalImage" src="" class="img-fluid w-100 rounded" alt="Gallery Large">
+            <div class="p-3 text-white text-center" id="modalCaption"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="py-4 bg-dark text-white fixed-bottom">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 S.N. Catering. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('#galleryModal').on('show.bs.modal', function (event) {
+        var link = $(event.relatedTarget);
+        var imgSrc = link.data('img');
+        var caption = link.data('caption');
+        $('#modalImage').attr('src', imgSrc);
+        $('#modalCaption').text(caption);
+      });
+    });
+    </script>
+</body>
+</html> 

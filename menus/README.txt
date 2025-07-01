@@ -1,0 +1,1 @@
+This folder will contain detailed menu pages for S.N. Catering. Add your menu HTML files here. 

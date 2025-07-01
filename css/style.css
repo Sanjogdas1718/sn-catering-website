@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.btn-primary {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+.bg-primary {
+    background-color: #d35400 !important;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Services */
+.service-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Testimonials */
+blockquote {
+    font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+        text-align: center;
+    }
+    
+    .cta-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+  .container, .container-fluid { padding-left: 8px !important; padding-right: 8px !important; }
+  .row { margin-left: 0 !important; margin-right: 0 !important; }
+  .navbar-nav { text-align: left !important; }
+  .footer, footer { font-size: 0.95rem !important; }
+  .btn { font-size: 1rem !important; }
+  .card { margin-bottom: 1rem !important; }
+  .img-fluid, .card-img-top, .menu-img, .gallery-img { width: 100% !important; height: auto !important; }
+}
+
+/* Responsive Images - Global */
+.img-fluid, .card-img-top, .menu-img, .gallery-img, img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  display: block;
+} 

@@ -1,0 +1,1 @@
+This folder will contain all website images for S.N. Catering. Add your image files here. 

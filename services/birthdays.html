@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Catering - S.N. Catering</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    @media (max-width: 767px) {
+      .container { padding: 0 10px !important; }
+      .card-img-top, .img-fluid { height: 140px !important; object-fit: cover; }
+      .btn { width: 100%; margin-bottom: 10px; }
+      .service-description { font-size: 1rem !important; }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">S.N. Catering</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="weddings.html">Wedding</a>
+                            <a class="dropdown-item active" href="birthdays.html">Birthday Parties</a>
+                            <a class="dropdown-item" href="corporate.html">Corporate Events</a>
+                            <a class="dropdown-item" href="family.html">Family Events</a>
+                            <a class="dropdown-item" href="special.html">Special Holiday Events</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="py-5 mt-5" style="position:relative; background: url('https://static.vecteezy.com/system/resources/thumbnails/023/635/404/small_2x/happy-birthday-background-illustration-ai-generative-free-photo.jpg') center/cover no-repeat;">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(44, 62, 80, 0.7);z-index:1;"></div>
+        <div class="container" style="position:relative;z-index:2;color:#fff;">
+            <h1 class="mb-4">Birthday Catering</h1>
+            <p>Celebrate your birthday with our delicious and fun menu options, perfect for guests of all ages!</p>
+            <h4 class="mt-4">Types of Catering for Birthdays</h4>
+            <div id="menu-notification" class="alert alert-success text-center" style="display:none; position:relative; z-index:10;">Explore our menu options below!</div>
+            <div class="mb-4">
+                <a href="../menus/platinum.html" class="btn btn-outline-info m-1">Platinum Menu</a>
+                <a href="../menus/gold.html" class="btn btn-outline-info m-1">Gold Menu</a>
+                <a href="../menus/silver.html" class="btn btn-outline-info m-1">Silver Menu</a>
+                <a href="../menus/arua-anna.html" class="btn btn-outline-danger m-1">Arua Anna</a>
+                <a href="../menus/without-onion-garlic.html" class="btn btn-outline-danger m-1">Without Onion-Garlic</a>
+                <a href="../menus/sn-special.html" class="btn btn-outline-danger m-1">S.N. Catering Special Menu</a>
+                <a href="../menus/typical-odia.html" class="btn btn-outline-danger m-1">Typical Odia Menu</a>
+            </div>
+            <h4 class="mt-4">Sample Menu</h4>
+            <ul>
+                <li>Welcome Drinks & Snacks</li>
+                <li>Kids' Special Menu</li>
+                <li>Live Counters (Popcorn, Ice Cream, etc.)</li>
+                <li>Cakes & Desserts</li>
+            </ul>
+            <div class="mt-4">
+                <a href="../contact.html" class="btn btn-primary btn-lg">Book Your Birthday Party</a>
+            </div>
+        </div>
+    </section>
+    <footer id="sn-footer" class="py-4 bg-dark text-white" style="display:none;">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 S.N. Catering. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var notif = document.getElementById('menu-notification');
+      notif.style.display = 'block';
+      setTimeout(function() { notif.style.display = 'none'; }, 2000);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var footer = document.getElementById('sn-footer');
+        footer.style.display = 'block';
+        footer.classList.add('animate__animated', 'animate__slideInUp');
+      }, 2000);
+    });
+    </script>
+</body>
+</html> 
