@@ -26,4 +26,10 @@ $(document).ready(function() {
             $('.menu-item').filter('.' + value).show();
         }
     });
+
+    // Auto-hide all footers after 5 seconds
+    setTimeout(function() {
+        // Select all footers with the main footer classes
+        $("footer.py-4.bg-dark.text-white, footer.fixed-bottom").fadeOut(800);
+    }, 5000);
 }); 

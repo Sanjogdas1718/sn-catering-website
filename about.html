@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - S.N. Catering</title>
+    <title>About Us - S.N Catering</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    .snc-logo {
+        height: 60px;
+        width: auto;
+        border-radius: 6px;
+        object-fit: contain;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">S.N. Catering</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo-white.jpeg" alt="S.N Catering Logo" class="snc-logo">
+                <span style="display:inline-block; width:10px;"></span>
+                S.N Catering
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,8 +50,8 @@
             </div>
         </div>
     </nav>
-    <section class="about-flyer-section" style="background: #4a4947; color: #ffc13b; padding: 0; min-height: 100vh;">
-        <div class="container py-4" style="max-width: 700px;">
+    <section class="about-flyer-section" style="background: #4a4947; color: #ffc13b; padding: 0; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="container py-4" style="max-width: 700px; margin-top: 32px;">
             <div class="text-center mb-3">
                 <div style="margin-bottom: 10px;">
                     <i class="fas fa-concierge-bell" style="font-size: 56px; color: #e74c3c;"></i>
@@ -83,11 +97,8 @@
         }
         </style>
     </section>
-    <footer class="py-4 bg-dark text-white fixed-bottom">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2023 S.N. Catering. All rights reserved.</p>
-        </div>
-    </footer>
+
+    <img src="images/logo-black.jpeg" alt="S.N Catering Logo" class="snc-logo-footer">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
