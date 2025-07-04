@@ -7,12 +7,60 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
     <style>
     @media (max-width: 767px) {
       .container { padding: 0 10px !important; }
       .card-img-top, .img-fluid { height: 140px !important; object-fit: cover; }
       .btn { width: 100%; margin-bottom: 10px; }
       .service-description { font-size: 1rem !important; }
+    }
+    body {
+        background: linear-gradient(135deg, #232526 0%, #b3701e 100%);
+        min-height: 100vh;
+    }
+    .service-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .service-card {
+        background: rgba(35, 37, 38, 0.98);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+        padding: 2.5rem 2rem 2rem 2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        color: #fff;
+        border: 1.5px solid #b3701e;
+        position: relative;
+        z-index: 2;
+    }
+    .service-card h2, .service-card h3 {
+        color: #b3701e;
+        font-weight: bold;
+        margin-bottom: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .service-card ul {
+        color: #fff;
+        margin-bottom: 1.2rem;
+    }
+    .service-card li {
+        margin-bottom: 0.5rem;
+    }
+    .service-icon {
+        font-size: 3.2rem;
+        color: #b3701e;
+        margin-bottom: 1.2rem;
+        text-align: center;
+        display: block;
     }
     </style>
 </head>
@@ -44,29 +92,35 @@
             </div>
         </div>
     </nav>
-    <section class="py-5 mt-5" style="position:relative; background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;">
-        <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(44, 62, 80, 0.7);z-index:1;"></div>
-        <div class="container" style="position:relative;z-index:2;color:#fff;">
-            <h1 class="mb-4">Special Holiday Events Catering</h1>
-            <p>Make your festive occasions unforgettable with our themed menus and vibrant presentations. From Diwali to Christmas, we add a special touch to every celebration.</p>
-            <div id="menu-notification" class="alert alert-success text-center" style="display:none; position:relative; z-index:10;">Explore our menu options below!</div>
-            <h4 class="mt-4">Types of Other Catering</h4>
-            <div class="mb-4">
-                <a href="../menus/small-party.html" class="btn btn-outline-danger m-1">Small Party Menu</a>
-                <a href="../menus/arua-anna.html" class="btn btn-outline-danger m-1">Arua Anna</a>
-                <a href="../menus/without-onion-garlic.html" class="btn btn-outline-danger m-1">Without Onion-Garlic</a>
-                <a href="../menus/sn-special.html" class="btn btn-outline-danger m-1">S.N. Catering Special Menu</a>
-                <a href="../menus/typical-odia.html" class="btn btn-outline-danger m-1">Typical Odia Menu</a>
-            </div>
-            <h4 class="mt-4">Sample Menu</h4>
-            <ul>
-                <li>Festive Welcome Drinks</li>
-                <li>Regional & International Delicacies</li>
-                <li>Live Counters & Sweets</li>
-                <li>Customizable Holiday Packages</li>
-            </ul>
-            <div class="mt-4">
-                <a href="../contact.html" class="btn btn-primary btn-lg">Book Your Holiday Event</a>
+    <section class="service-section animate__animated animate__fadeInUp animate__delay-1s" data-aos="fade-up" style="width:100vw; min-width:100vw;">
+        <div class="container" style="max-width: 100vw;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-12">
+                    <div class="service-card animate__animated animate__fadeInUp animate__delay-1s" data-aos="zoom-in">
+                        <span class="service-icon"><i class="fas fa-star"></i></span>
+                        <h2>Special Holiday Events Catering</h2>
+                        <p>Make your festive occasions unforgettable with our themed menus and vibrant presentations. From Diwali to Christmas, we add a special touch to every celebration.</p>
+                        <div id="menu-notification" class="alert alert-success text-center" style="display:none; position:relative; z-index:10;">Explore our menu options below!</div>
+                        <h3>Types of Other Catering</h3>
+                        <div class="mb-4">
+                            <a href="../menus/small-party.html" class="btn btn-outline-danger m-1">Small Party Menu</a>
+                            <a href="../menus/arua-anna.html" class="btn btn-outline-danger m-1">Arua Anna</a>
+                            <a href="../menus/without-onion-garlic.html" class="btn btn-outline-danger m-1">Without Onion-Garlic</a>
+                            <a href="../menus/sn-special.html" class="btn btn-outline-danger m-1">S.N. Catering Special Menu</a>
+                            <a href="../menus/typical-odia.html" class="btn btn-outline-danger m-1">Typical Odia Menu</a>
+                        </div>
+                        <h3>Sample Menu</h3>
+                        <ul>
+                            <li>Festive Welcome Drinks</li>
+                            <li>Regional & International Delicacies</li>
+                            <li>Live Counters & Sweets</li>
+                            <li>Customizable Holiday Packages</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="../contact.html" class="btn btn-primary btn-lg">Book Your Holiday Event</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -92,6 +146,7 @@
         footer.classList.add('animate__animated', 'animate__slideInUp');
       }, 2000);
     });
+    AOS.init({ once: true, duration: 900 });
     </script>
 </body>
 </html> 

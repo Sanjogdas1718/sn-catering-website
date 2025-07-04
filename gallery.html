@@ -7,18 +7,54 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
     <style>
-    .gallery-img {
-      width: 100% !important;
-      height: auto !important;
-      object-fit: cover;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    body {
+        background: linear-gradient(135deg, #232526 0%, #b3701e 100%);
+        min-height: 100vh;
     }
-    @media (max-width: 767px) {
-      .gallery-img { height: 120px !important; }
-      .card-body small { font-size: 0.9rem !important; }
-      .container { padding: 0 5px !important; }
+    .gallery-section {
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .gallery-section .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .gallery-img {
+        transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+        width: 100%;
+        max-height: 220px;
+        object-fit: cover;
+        display: block;
+        border-radius: 0.5rem;
+    }
+    .gallery-img:hover {
+        transform: scale(1.08) rotateZ(-2deg);
+        box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+        z-index: 2;
+    }
+    .gallery-section .card.h-100 {
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+        background: rgba(35, 37, 38, 0.98);
+        border-radius: 18px;
+        border: 1.5px solid #b3701e;
+        color: #fff;
+    }
+    .gallery-section h1, .gallery-section h2, .gallery-section h3, .gallery-section .card-body small {
+        color: #b3701e;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .gallery-section p, .gallery-section .card-body {
+        color: #fff;
     }
     .snc-logo {
         height: 60px;
@@ -28,11 +64,20 @@
         display: inline-block;
         vertical-align: middle;
     }
+    .navbar-nav .nav-link {
+        transition: transform 0.2s cubic-bezier(.4,2,.6,1);
+    }
+    .navbar-nav .nav-link:hover {
+        transform: scale(1.18);
+        color: #ffc13b !important;
+        z-index: 2;
+        animation: animate__zoomIn 0.3s;
+    }
     </style>
 </head>
-<body style="background: linear-gradient(135deg, #f8f6f0 0%, #e8e6e1 100%), url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); background-repeat: repeat; min-height: 100vh;">
+<body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top animate__animated animate__fadeInDown">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="images/logo-white.png" alt="SN Catering Logo" class="snc-logo">
@@ -61,128 +106,98 @@
             </div>
         </div>
     </nav>
-    <section class="py-5 mt-5" style="background: linear-gradient(135deg, #e0a362 0%, #fd682d 100%); border-radius: 18px; box-shadow: 0 4px 32px rgba(44,62,80,0.08);">
-        <div class="container">
+    <section class="gallery-section animate__animated animate__fadeInUp animate__delay-1s" data-aos="fade-up" style="width:100vw; min-width:100vw;">
+        <div class="container" style="max-width: 100vw;">
             <h1 class="mb-4">Photo Gallery</h1>
             <p>Check out some of our best moments and delicious dishes from past events!</p>
             <div class="row">
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355683981.jpg" data-caption="Celebration Setup">
-                            <img src="images/gallery/FB_IMG_1751355683981.jpg" class="img-fluid rounded gallery-img" alt="Celebration Setup">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355683981.jpg" class="gallery-img" alt="Celebration Setup">
                         <div class="card-body p-2 text-center"><small>Celebration Setup</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355656313.jpg" data-caption="Buffet Table">
-                            <img src="images/gallery/FB_IMG_1751355656313.jpg" class="img-fluid rounded gallery-img" alt="Buffet Table">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355656313.jpg" class="gallery-img" alt="Buffet Table">
                         <div class="card-body p-2 text-center"><small>Buffet Table</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355687478.jpg" data-caption="Event Decor">
-                            <img src="images/gallery/FB_IMG_1751355687478.jpg" class="img-fluid rounded gallery-img" alt="Event Decor">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355687478.jpg" class="gallery-img" alt="Event Decor">
                         <div class="card-body p-2 text-center"><small>Event Decor</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355660613.jpg" data-caption="Food Display">
-                            <img src="images/gallery/FB_IMG_1751355660613.jpg" class="img-fluid rounded gallery-img" alt="Food Display">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355660613.jpg" class="gallery-img" alt="Food Display">
                         <div class="card-body p-2 text-center"><small>Food Display</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355674035.jpg" data-caption="Serving Area">
-                            <img src="images/gallery/FB_IMG_1751355674035.jpg" class="img-fluid rounded gallery-img" alt="Serving Area">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355674035.jpg" class="gallery-img" alt="Serving Area">
                         <div class="card-body p-2 text-center"><small>Serving Area</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355737549.jpg" data-caption="Dessert Table">
-                            <img src="images/gallery/FB_IMG_1751355737549.jpg" class="img-fluid rounded gallery-img" alt="Dessert Table">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355737549.jpg" class="gallery-img" alt="Dessert Table">
                         <div class="card-body p-2 text-center"><small>Dessert Table</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355690161.jpg" data-caption="Outdoor Event">
-                            <img src="images/gallery/FB_IMG_1751355690161.jpg" class="img-fluid rounded gallery-img" alt="Outdoor Event">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355690161.jpg" class="gallery-img" alt="Outdoor Event">
                         <div class="card-body p-2 text-center"><small>Outdoor Event</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355734906.jpg" data-caption="Table Setting">
-                            <img src="images/gallery/FB_IMG_1751355734906.jpg" class="img-fluid rounded gallery-img" alt="Table Setting">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355734906.jpg" class="gallery-img" alt="Table Setting">
                         <div class="card-body p-2 text-center"><small>Table Setting</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355666756.jpg" data-caption="Buffet Spread">
-                            <img src="images/gallery/FB_IMG_1751355666756.jpg" class="img-fluid rounded gallery-img" alt="Buffet Spread">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355666756.jpg" class="gallery-img" alt="Buffet Spread">
                         <div class="card-body p-2 text-center"><small>Buffet Spread</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355678675.jpg" data-caption="Live Counter">
-                            <img src="images/gallery/FB_IMG_1751355678675.jpg" class="img-fluid rounded gallery-img" alt="Live Counter">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355678675.jpg" class="gallery-img" alt="Live Counter">
                         <div class="card-body p-2 text-center"><small>Live Counter</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355671798.jpg" data-caption="Banquet Hall">
-                            <img src="images/gallery/FB_IMG_1751355671798.jpg" class="img-fluid rounded gallery-img" alt="Banquet Hall">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355671798.jpg" class="gallery-img" alt="Banquet Hall">
                         <div class="card-body p-2 text-center"><small>Banquet Hall</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355676258.jpg" data-caption="Buffet Service">
-                            <img src="images/gallery/FB_IMG_1751355676258.jpg" class="img-fluid rounded gallery-img" alt="Buffet Service">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355676258.jpg" class="gallery-img" alt="Buffet Service">
                         <div class="card-body p-2 text-center"><small>Buffet Service</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355680869.jpg" data-caption="Food Platter">
-                            <img src="images/gallery/FB_IMG_1751355680869.jpg" class="img-fluid rounded gallery-img" alt="Food Platter">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355680869.jpg" class="gallery-img" alt="Food Platter">
                         <div class="card-body p-2 text-center"><small>Food Platter</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355698965.jpg" data-caption="Event Ambience">
-                            <img src="images/gallery/FB_IMG_1751355698965.jpg" class="img-fluid rounded gallery-img" alt="Event Ambience">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355698965.jpg" class="gallery-img" alt="Event Ambience">
                         <div class="card-body p-2 text-center"><small>Event Ambience</small></div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-img="images/gallery/FB_IMG_1751355746771.jpg" data-caption="Celebration Moment">
-                            <img src="images/gallery/FB_IMG_1751355746771.jpg" class="img-fluid rounded gallery-img" alt="Celebration Moment">
-                        </a>
+                        <img src="images/gallery/FB_IMG_1751355746771.jpg" class="gallery-img" alt="Celebration Moment">
                         <div class="card-body p-2 text-center"><small>Celebration Moment</small></div>
                     </div>
                 </div>
@@ -262,6 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
     $(document).ready(function() {
       $('#galleryModal').on('show.bs.modal', function (event) {
@@ -272,6 +288,7 @@
         $('#modalCaption').text(caption);
       });
     });
+    AOS.init({ once: true, duration: 900 });
     </script>
 </body>
 </html> 
